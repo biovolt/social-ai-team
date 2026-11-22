@@ -107,6 +107,9 @@ Takes approved content from any content skill and schedules it via Blotato MCP. 
 ### `/social-performance-review` — Social Media Analyst
 Monthly performance review. Accepts CSV exports, screenshots, or manual data input — adapts to whatever the client can provide. Identifies top and bottom performers, content pillar and format patterns, and produces ranked recommendations for next month. Updates `best-performers.md` to feed back into content quality.
 
+### `/watch`: Video Analyst
+Watches a video (URL or local file) and answers questions about it with timestamps. Useful for reviewing competitor content, reference videos, or a client's past posts. With a Gemini API key (free at https://aistudio.google.com/apikey, saved in `~/.config/watch/.env`), Google's Gemini model watches the full video. Without a key it extracts frames and a transcript locally (needs `ffmpeg` and `yt-dlp`). Third-party skill from [bradautomates/claude-video](https://github.com/bradautomates/claude-video) (MIT, v0.3.2), reviewed before inclusion.
+
 ---
 
 ## Folder Structure (Per Client)
@@ -158,7 +161,7 @@ bash install.sh
 
 **Windows:** double-click `install.bat` (or run it from the command line).
 
-This copies all 10 skills into `~/.claude/skills/` where Claude Code can find them.
+This copies all 11 skills into `~/.claude/skills/` where Claude Code can find them.
 
 ---
 
